@@ -3,51 +3,93 @@ import { projects } from '@/data/projects'
 export default function Projects() {
   return (
     <div className="page-container">
-      <h1 className="text-4xl font-bold mb-8">Projects</h1>
-      
-      <div className="space-y-8">
-        {projects.map((project) => (
-          <div 
+      <div className="mb-2">
+        <h1
+          className="text-3xl font-semibold mb-1"
+          style={{ fontFamily: 'var(--font-family-mono)' }}
+        >
+          Projects
+        </h1>
+        <p
+          className="text-sm text-secondary"
+          style={{ fontFamily: 'var(--font-family-mono)' }}
+        >
+          {'// '}
+          {projects.length} {projects.length === 1 ? 'entry' : 'entries'}
+        </p>
+      </div>
+
+      <div className="mt-6">
+        {projects.map((project, i) => (
+          <div
             key={project.title}
-            className="border border-gray-200 rounded-lg p-6 hover:border-gray-300 transition-colors"
+            className="py-7"
+            style={{
+              borderBottom: '1px solid var(--color-line)',
+              borderTop: i === 0 ? '1px solid var(--color-line)' : undefined,
+            }}
           >
-            <div className="flex items-start justify-between mb-3">
-              <h2 className="text-xl font-semibold">{project.title}</h2>
-              <div className="flex gap-3">
-                {project.github && (
-                  <a 
-                    href={project.github}
-                    className="text-sm text-secondary hover:text-accent transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Code
-                  </a>
-                )}
-                {project.link && (
-                  <a 
-                    href={project.link}
-                    className="text-sm text-accent hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Demo →
-                  </a>
-                )}
-              </div>
+            <div className="flex items-baseline justify-between gap-4 mb-2.5">
+              <h2
+                className="text-lg font-semibold"
+                style={{ fontFamily: 'var(--font-family-mono)' }}
+              >
+                {project.title}
+              </h2>
+              <span
+                className="text-xs px-2 py-0.5 rounded shrink-0 whitespace-nowrap"
+                style={{
+                  fontFamily: 'var(--font-family-mono)',
+                  border: `1px solid ${project.status === 'stable' ? 'var(--color-stable)' : 'var(--color-accent)'}`,
+                  color: project.status === 'stable' ? 'var(--color-stable)' : 'var(--color-accent)',
+                }}
+              >
+                {project.status === 'stable' ? 'stable' : 'in progress'}
+              </span>
             </div>
-            
-            <p className="text-secondary mb-4">{project.description}</p>
-            
-            <div className="flex flex-wrap gap-2">
-              {project.technologies.map((tech) => (
-                <span 
-                  key={tech}
-                  className="px-3 py-1 text-xs bg-gray-100 text-secondary rounded-full"
+
+            <p className="text-secondary text-sm leading-relaxed mb-3.5 max-w-2xl">
+              {project.description}
+            </p>
+
+            <div className="flex items-center justify-between flex-wrap gap-3">
+              <div className="flex gap-2 flex-wrap">
+                {project.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-xs px-2.5 py-0.5 rounded text-secondary"
+                    style={{
+                      fontFamily: 'var(--font-family-mono)',
+                      border: '1px solid var(--color-line)',
+                    }}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {project.github && (
+                <a
+                  href={project.github}
+                  className="text-xs text-accent hover:underline"
+                  style={{ fontFamily: 'var(--font-family-mono)' }}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {tech}
-                </span>
-              ))}
+                  view source →
+                </a>
+              )}
+              {project.link && (
+                <a
+                  href={project.link}
+                  className="text-xs text-accent hover:underline"
+                  style={{ fontFamily: 'var(--font-family-mono)' }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  live demo →
+                </a>
+              )}
             </div>
           </div>
         ))}

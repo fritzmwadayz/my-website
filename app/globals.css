@@ -3,21 +3,32 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-primary: #1a1a1a;
-  --color-secondary: #666666;
-  --color-accent: #0066cc;
-  --font-family-sans: 'Inter', system-ui, sans-serif;
+  --color-primary: #23252B;
+  --color-secondary: #6B6D78;
+  --color-accent: #8A5CC9;
+  --color-accent-soft: #ECE5F7;
+  --color-line: #E2E1E6;
+  --color-page-bg: #FAFAF8;
+  --color-stable: #50A14F;
+  --font-family-sans: var(--font-sans), system-ui, sans-serif;
+  --font-family-mono: var(--font-mono), ui-monospace, monospace;
 }
 
 .dark {
-  --color-primary: #f5f5f5;
-  --color-secondary: #a0a0a0;
-  --color-accent: #3b82f6;
-  --font-family-sans: 'Inter', system-ui, sans-serif;
+  --color-primary: #ABB2BF;
+  --color-secondary: #6B7280;
+  --color-accent: #C678DD;
+  --color-accent-soft: #3B3142;
+  --color-line: #3A3F4B;
+  --color-page-bg: #282C34;
+  --color-stable: #98C379;
 }
 
 body {
-  @apply bg-white text-primary antialiased;
+  @apply antialiased;
+  background: var(--color-page-bg);
+  color: var(--color-primary);
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 .page-container {
@@ -25,5 +36,16 @@ body {
 }
 
 .section-title {
-  @apply text-2xl font-semibold mb-8 text-primary;
+  font-family: var(--font-family-mono);
+  @apply text-sm font-semibold mb-7 text-secondary tracking-wide uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-line);
 }

@@ -1,15 +1,21 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-100">
+    <footer style={{ borderTop: '1px solid var(--color-line)' }}>
       <div className="max-w-3xl mx-auto px-6 py-8">
-        <div className="flex justify-between items-center text-sm text-secondary">
-          <p>© {new Date().getFullYear()} Mwadime</p>
-          <div className="flex gap-4">
+        <div
+          className="flex justify-between items-center text-xs text-secondary"
+          style={{ fontFamily: 'var(--font-family-mono)' }}
+        >
+          <p>© {new Date().getFullYear()} mwadime</p>
+          <div className="flex gap-5">
             <a href="https://github.com/fritzmwadayz" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-              GitHub
+              github
             </a>
             <a href="https://linkedin.com/in/mwadayz" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-              LinkedIn
+              linkedin
+            </a>
+            <a href="https://t.me/fritzmwadayz" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+              telegram
             </a>
           </div>
         </div>
