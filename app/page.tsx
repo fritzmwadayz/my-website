@@ -7,27 +7,27 @@ export default function Home() {
         </h1>
         
         <p className="text-xl text-secondary leading-relaxed">
-          I'm a computer scientist and software developer passionate about building clean, 
-          performant applications. I focus on creating great user 
-          experiences with modern technologies.
+          I'm a computer scientist who likes building things from first principles including
+          search engines, puzzle solvers, and small tools that do one job well. I mostly work with
+          Python, currently learning C and Assembly.
         </p>
         
         <div className="pt-8 space-y-4">
           <h2 className="section-title">What I Do</h2>
           <div className="grid gap-4">
             <div className="p-4 border border-gray-200 rounded-lg">
-              <h3 className="font-medium mb-2">Web Development</h3>
+              <h3 className="font-medium mb-2">Algorithms & Systems</h3>
               <p className="text-secondary text-sm">
-                Building responsive, accessible web applications using Vue.js, React, 
-                Next.js, and modern CSS frameworks.
+                Implementing search and solving algorithms from scratch: inverted indexes,
+                constraint propagation, and the data structures underneath them.
               </p>
             </div>
             
             <div className="p-4 border border-gray-200 rounded-lg">
-              <h3 className="font-medium mb-2">Backend Systems</h3>
+              <h3 className="font-medium mb-2">Backend & Tooling</h3>
               <p className="text-secondary text-sm">
-                Designing and implementing scalable APIs and database 
-                architectures with FastAPI, Node.js and TypeScript.
+                Building CLIs, REPLs, and lightweight APIs in Python with FastAPI,
+                and starting to move closer to the metal with C.
               </p>
             </div>
           </div>
@@ -36,7 +36,9 @@ export default function Home() {
         <div className="pt-8">
           <h2 className="section-title">Currently</h2>
           <p className="text-secondary">
-            Working on personal projects and open to new opportunities.
+            Building a lexicon editor to help compile a Taita-language dictionary,
+            with a chess engine, a download manager, and a small C interpreter/compiler
+            lined up next.
           </p>
         </div>
       </section>

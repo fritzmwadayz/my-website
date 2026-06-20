@@ -5,10 +5,10 @@ export default function Footer() {
         <div className="flex justify-between items-center text-sm text-secondary">
           <p>© {new Date().getFullYear()} Mwadime</p>
           <div className="flex gap-4">
-            <a href="https://github.com/fritzmwadayz" className="hover:text-accent transition-colors">
+            <a href="https://github.com/fritzmwadayz" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
               GitHub
             </a>
-            <a href="https://linkedin.com/in/mwadayz" className="hover:text-accent transition-colors">
+            <a href="https://linkedin.com/in/mwadayz" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
               LinkedIn
             </a>
           </div>

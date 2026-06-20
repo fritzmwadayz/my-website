@@ -6,7 +6,7 @@ export default function Contact() {
       <div className="space-y-8">
         <p className="text-lg text-secondary leading-relaxed">
           I'm always open to discussing new projects, creative ideas, or 
-          opportunities to be part of your vision. I am open to volunteering as well
+          opportunities to be part of your vision. I am open to volunteering as well.
           Feel free to reach out through any of the channels below.
         </p>
         
@@ -16,7 +16,7 @@ export default function Contact() {
             <div>
               <h3 className="font-medium">Email</h3>
               <a 
-                href="mailto:your.email@example.com"
+                href="mailto:mwadayz@yandex.com"
                 className="text-secondary hover:text-accent transition-colors"
               >
                 mwadayz@yandex.com
@@ -40,16 +40,16 @@ export default function Contact() {
           </div>
           
           <div className="flex items-center gap-4">
-            <span className="text-accent">🐦</span>
+            <span className="text-accent">✈️</span>
             <div>
-              <h3 className="font-medium">Twitter</h3>
+              <h3 className="font-medium">Telegram</h3>
               <a 
-                href="https://twitter.com/mwadayz_"
+                href="https://t.me/fritzmwadayz"
                 className="text-secondary hover:text-accent transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @mwadayz_
+                @fritzmwadayz
               </a>
             </div>
           </div>
