@@ -24,4 +24,20 @@ export const projects: Project[] = [
     status: 'stable',
     github: 'https://github.com/fritzmwadayz/sudoku-solver',
   },
+  {
+    title: 'Lexicon editor',
+    description:
+      'A terminal UI for curating a Taita-language dictionary sourced from a parallel Taita/Swahili/English Bible corpus. Built around a SQLite-backed data model with four tables — entries, variations, examples, and a full edit_history audit trail. The editor handles orthographic normalization (correcting inconsistent transcription of non-Latin sounds), dialect-tagged variation forms, structured verse references, and status-workflow tracking (pending → reviewed → complete → flagged) per entry. Built with Textual.',
+    technologies: ['python', 'textual', 'sqlite'],
+    status: 'stable',
+    github: 'https://github.com/fritzmwadayz/lexicon-editor',
+  },
+  {
+    title: 'Chess engine',
+    description:
+      'A chess engine being built from scratch in Python. The board is represented as a 64-element integer array with a signed piece encoding (positive white, negative black). The position struct tracks side-to-move, castling rights, en passant square, half/full move counters, and a move history — with three-fold repetition detection implemented via position hashing from the start.',
+    technologies: ['python'],
+    status: 'active',
+    github: 'https://github.com/fritzmwadayz/chess-engine',
+  },
 ]

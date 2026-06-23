@@ -13,12 +13,12 @@ export default function Home() {
           className="text-4xl font-semibold tracking-tight leading-tight"
           style={{ fontFamily: 'var(--font-family-mono)' }}
         >
-          Mwadime<span className="text-accent">.</span> Building things from
-          first principles.
+          Mwadime<span className="text-accent">.</span> Building things out
+          of curiosity.
         </h1>
 
         <p className="text-lg text-secondary leading-relaxed max-w-xl">
-          Computer scientist working mostly in{' '}
+          Computer scientist working mostly with{' '}
           <code
             className="text-accent px-1.5 py-0.5 rounded text-sm"
             style={{ fontFamily: 'var(--font-family-mono)', background: 'var(--color-accent-soft)' }}
@@ -39,8 +39,7 @@ export default function Home() {
           >
             assembly
           </code>
-          . I write search engines, solvers, and small tools that do one job
-          well.
+          . I write small tools that do things well, (sometimes).
         </p>
 
         <div className="pt-10 space-y-4">
@@ -58,7 +57,7 @@ export default function Home() {
               </h3>
               <p className="text-secondary text-sm leading-relaxed">
                 Inverted indexes, constraint propagation, and the data
-                structures underneath them — implemented from scratch.
+                structures underneath them; implemented from scratch.
               </p>
             </div>
 
@@ -83,11 +82,10 @@ export default function Home() {
             className="text-secondary text-sm leading-loose"
             style={{ fontFamily: 'var(--font-family-mono)' }}
           >
-            <span className="text-accent">&gt;</span> building a lexicon
-            editor for a Taita-language dictionary
+            <span className="text-accent">&gt;</span> building a chess engine from
+            scratch
             <br />
-            <span className="text-accent">&gt;</span> next up: chess engine,
-            download manager, C interpreter
+            <span className="text-accent">&gt;</span> next up: download manager, C interpreter
           </p>
         </div>
       </section>
